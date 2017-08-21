@@ -18,6 +18,7 @@ http://localhost:8080/greeting
 
 http://localhost:8080/greeting?name=Vishal
 
+(with http header `Content-Type` as `application/json`)
 
 Spring Cacheable Example
 ------------------------

@@ -20,7 +20,7 @@ public class GreetingController {
         this.repository = repository;
     }
 
-    @RequestMapping("/greeting")
+    @RequestMapping(value="/greeting", produces={"application/json","application/xml"}, consumes={"application/json","application/xml"})
     public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
         return new Greeting(counter.incrementAndGet(),
                 String.format(template, repository.getFullName(name)));
